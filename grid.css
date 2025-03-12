@@ -1,0 +1,179 @@
+:root {
+    font: normal 400 62.5%/1.5 'Jost', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1168px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.task-1 > .work-area {
+    width: 800px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    gap: 8px 8px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "red yellow-1 yellow-1 red-1"
+    "red white-2 white-3 red-1"
+    "red white-2 white-3 white-4"
+    "white-5 white-1 white-1 white"
+    "white-6 blue blue white"
+    "black blue blue yellow";
+    background-color: #000;
+}
+
+
+.red {
+    grid-area: red;
+}
+
+.black {
+    grid-area: black;
+}
+
+.blue {
+    grid-area: blue;
+}
+
+.white {
+    grid-area: white;
+}
+
+.yellow {
+    grid-area: yellow;
+}
+
+.red-1 {
+    grid-area: red-1;
+}
+
+.white-1 {
+    grid-area: white-1;
+}
+
+.white-2 {
+    grid-area: white-2;
+}
+
+.white-3 {
+    grid-area: white-3;
+}
+
+.yellow-1 {
+    grid-area: yellow-1;
+}
+
+.white-4 {
+    grid-area: white-4;
+}
+
+.white-5 {
+    grid-area: white-5;
+}
+
+.white-6 {
+    grid-area: white-6;
+}
+
+[class^="red"] {
+    background-color: red;
+}
+
+[class^="black"] {
+    background-color: black;
+}
+
+[class^="blue"] {
+    background-color: blue;
+}
+
+[class^="yellow"] {
+    background-color: yellow;
+}
+
+[class^="white"] {
+    background-color: white;
+}
+
+.task-2 > .work-area {
+    width: 1000px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+    "panel work-area work-area work-area"
+    "panel work-area work-area work-area"
+    "panel work-area work-area work-area";
+    background-color: black;
+}
+
+.panel { grid-area: panel; }
+.work-area { grid-area: work-area; }
+
+.task-2 > .work-area > div {
+    background-color: white;
+}
+
+.task-2 > .work-area img {
+    display: block;
+    width: 270px;
+    height: 270px;
+}
+
+.task-3 > .work-area {
+    width: 1000px;
+    height: 270px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    display: grid;
+    grid-template-areas: "overlay";
+    align-items: center;
+    justify-items: center;
+}
+
+.gallery-img {
+    grid-area: overlay;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-link {
+    grid-area: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+}
+
+
+.task-3 > .work-area img {
+    display: block;
+    height: 270px;
+}
